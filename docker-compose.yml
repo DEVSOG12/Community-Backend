@@ -1,0 +1,20 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:alpine
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: chapDB
+      PGDATA: /tmp
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - '3350:3350'
