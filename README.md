@@ -4,7 +4,7 @@
 
 It's is an Apollo Graphql Server created using typescript which uses postgres as it's database. and is deployed in heroku using docker container.
 
-<!-- https://chapserver.herokuapp.com -->
+https://.herokuapp.com
 
 ## Client
 

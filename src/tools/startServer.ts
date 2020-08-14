@@ -40,8 +40,11 @@ const connectDB = async () => {
     } catch (e) {
       retry--;
       console.log(e);
+      console.log(`${retry}🗄️ database not connected 🗄️`);
       console.log(`${retry} retries remaining`);
+  
       await new Promise(res => setTimeout(res, 5000));
+      console.log('🗄️ database at all not connected 🗄️');
     }
   }
 };
