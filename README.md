@@ -4,11 +4,19 @@
 
 It's is an Apollo Graphql Server created using typescript which uses postgres as it's database. and is deployed in heroku using docker container.
 
-https://.herokuapp.com
+# Check it Out
+https://communityfortb.herokuapp.com
 
 ## Client
 
-### Flutter app
+## Flutter app
+
+
+- Android
+
+- iOS
+
+- Web
 
 <!-- Checkout the flutter client [Chat app flutter](https://github.com/vineeshvk/chat-app-flutter) -->
 
@@ -70,3 +78,6 @@ docker-compose up
 
 in the project directory.
 then open **http://localhost:3350** in your web browser
+
+### With Heroku
+ this step requires a

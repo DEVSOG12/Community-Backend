@@ -10,24 +10,24 @@ const docker = {
   password: '12345',
   database: 'chapDB',
 };
-
+// For Development Locally
 const dev = {
   host: 'localhost',
   port: 5432,
-  username: 'vineesh',
+  username: 'testing',
   password: '1234',
   database: 'chapDB',
 };
-const heroku = {
-  host: 'ec2-52-204-20-42.compute-1.amazonaws.com',
-  port: 5432,
-  username: 'tvjpypkdpeneeq',
-  password: '07870730d86ebfee3fbd5be2bab42d300dfaba5dc654c327725e60cd5ac5992d',
-  database: 'dd4c8mpho9b7j4',
-  // extra: { ssl: true },
-};
+
+
+// To deploy to heroku 
+// You will need to add a POSTGRES ADD-ON ON HEROKU
+
+// Put the URL in ENV
+
+
 const deploy = {
-  url: 'postgres://tvjpypkdpeneeq:07870730d86ebfee3fbd5be2bab42d300dfaba5dc654c327725e60cd5ac5992d@ec2-52-204-20-42.compute-1.amazonaws.com:5432/dd4c8mpho9b7j4',
+  url: process.env.POSTGRES_URL,
   ssl: true,
   extra: {
     ssl: {
@@ -36,11 +36,10 @@ const deploy = {
   },
 };
 
-const config = 
-// '' ? 
-deploy
-//  :
-//  docker;
+
+//postgres://tvjpypkdpeneeq:07870730d86ebfee3fbd5be2bab42d300dfaba5dc654c327725e60cd5ac5992d@ec2-52-204-20-42.compute-1.amazonaws.com:5432/dd4c8mpho9b7j4
+const config = process.env.POSTGRES_URL ? deploy :docker;
+
 
 
 // const config = heroku;
